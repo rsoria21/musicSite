@@ -3,12 +3,15 @@
   padding: 0;
   font-family: sans-serif;
 }
+body {
+  background-color: rgb(0, 0, 0);
+}
 
 .container {
   height: 100vh;
-  width: 100%;
+  /* width: 100%; */
   background-color: #181818;
-  background-image: url();
+  background-image: url(/images/tri.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -16,7 +19,7 @@
 
 /* START NAVBAR */
 nav {
-  background: #222;
+  background: rgba(3, 26, 31, 0.42);
   padding: 0 15px;
   margin-top: 0;
 }
@@ -96,7 +99,7 @@ nav {
 .has-submenu i {
   font-size: 12px;
 }
-.has-submenu > .nav-link::after {
+/* .has-submenu > .nav-link::after {
   font-family: "Font Awesome 5 Free";
   font-size: 12px;
   line-height: 16px;
@@ -104,7 +107,7 @@ nav {
   content: "\f078";
   color: white;
   padding-left: 5px;
-}
+} */
 .subitem .nav-link {
   padding: 10px 15px;
 }
@@ -190,14 +193,22 @@ nav {
 }
 /* END NAVBAR */
 
+/* START MAIN CONTENT */
 .content {
   width: 100%;
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   top: 30%;
 }
 
 .left-col {
   margin-left: 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-text {
@@ -209,20 +220,112 @@ nav {
 
 .right-col {
   float: right;
-  margin-right: 6%;
-  margin-top: 120px;
+  /* margin-right: 6%; */
+  /* margin-top: 120px; */
   display: flex;
+  justify-content: center;
   align-items: center;
 }
+/* CARD */
+.column {
+  /* float: left; */
+  width: 50%;
+  padding: 10px 20px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* padding: 16px; */
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #040c10c1;
+}
+.project-container {
+  position: relative;
+}
+.project-image {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.project-skill {
+  color: #ebebeb;
+  margin-bottom: 30px;
+}
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .btn-container {
+    flex-direction: column;
+  }
+  .column {
+    margin-top: 5rem;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .left-col {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .btn-container {
+    flex-direction: row;
+  }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .left-col {
+    margin-left: 0;
+  }
+}
+/* END CARD */
 
 .cta-text {
   font-size: 18px;
   color: #5f5f5f;
   font-weight: 400;
-  margin-right: 15px;
+  margin-top: 12px;
 }
 
 #icon {
   width: 80px;
   cursor: pointer;
+}
+/* START SOCIAL ICONS */
+.social-icon {
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 20px 10px;
+}
+.fa-facebook-f {
+  color: #3b5998;
+}
+.fa-instagram {
+  background: linear-gradient(to right, #fcaf45, #e1306c, #5851db);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.fa-soundcloud {
+  color: #fe5000;
+}
+
+.fa-youtube {
+  color: #ff0000;
+}
+
+.fa-music {
+  font-size: 28px;
+  color: white;
+  background: linear-gradient(to right, #fc3c44, #f94c57, #c2cad7);
+  padding: 3px 6px 3px 3px;
+  border-radius: 7px;
 }
